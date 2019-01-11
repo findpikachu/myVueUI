@@ -22,5 +22,8 @@
   "homepage": "https://github.com/findpikachu/myVueUI#readme",
   "dependencies": {
     "vue": "^2.5.21"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0"
   }
 }
