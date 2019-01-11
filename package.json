@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/findpikachu/myVueUI/issues"
   },
-  "homepage": "https://github.com/findpikachu/myVueUI#readme"
+  "homepage": "https://github.com/findpikachu/myVueUI#readme",
+  "dependencies": {
+    "vue": "^2.5.21"
+  }
 }
