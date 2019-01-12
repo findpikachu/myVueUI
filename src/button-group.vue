@@ -24,6 +24,10 @@
     }
     .g-button {
         border-radius: 0;
+
+    }
+
+    .g-button:not(:first-child) {
         margin-left: -1px;
     }
 
