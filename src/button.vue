@@ -1,9 +1,10 @@
 <template>
     <button class="g-button" :class="`icon-${iconPosition}`">
         <g-icon v-if="icon" :icon="icon"></g-icon>
-       <div class="content">
-           <slot></slot>
-       </div>
+        <g-icon icon="icon-loading" class="loading"></g-icon>
+        <div class="content">
+            <slot></slot>
+        </div>
     </button>
 </template>
 
@@ -11,12 +12,12 @@
     export default {
         name: "button",
         props: {
-            icon:String,
+            icon: String,
             iconPosition: {
-                type:String,
+                type: String,
                 default: "left",
                 validator(value) {
-                    return ["left","right"].includes(value)
+                    return ["left", "right"].includes(value)
                 }
             }
         }
@@ -37,12 +38,15 @@
         color: var(--color);
         border: 1px solid var(--border-color);
     }
+
     .g-button:hover {
         border-color: var(--border-color-hover);
     }
+
     .g-button:active {
         background-color: var(--button-active-bg);
     }
+
     .g-button:focus {
         outline: none;
     }
@@ -62,5 +66,20 @@
     .icon-left > .icon {
         order: 1;
     }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .loading {
+        animation: spin 2s infinite linear;
+    }
+
 
 </style>
