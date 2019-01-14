@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my vue ui</title>
+    <style>* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --button-height: 32px;
+            --font-size: 14px;
+            --button-bg: white;
+            --button-active-bg: #eee;
+            --border-radius: 4px;
+            --color: #333;
+            --border-color: #999;
+            --border-color-hover: #666;
+        }</style>
+    <script src="//at.alicdn.com/t/font_1012082_v9wf689pne.js"></script>
+<link rel="stylesheet" href="/app.a6a4d504.css"></head>
+<body>
+<div id="app">
+    <g-button icon="icon-setting" :loading="loading" @click="loading = !loading">按钮</g-button>
+    <g-button>按钮</g-button>
+    <g-button icon="icon-setting" icon-position="right">按钮</g-button>
+    <g-button-group>
+
+
+        <g-button icon="icon-left">上一页</g-button>
+
+        <g-button>更多</g-button>
+        <g-button icon="icon-right" icon-position="right">下一页</g-button>
+    </g-button-group>
+
+</div>
+<script src="/vue.min.ee463479.js"></script>
+<script src="/app.a6a4d504.js"></script>
+
+</body>
+</html>
