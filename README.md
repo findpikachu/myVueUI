@@ -1,9 +1,17 @@
 # myVueUI
 [![Build Status](https://travis-ci.org/findpikachu/myVueUI.svg?branch=master)](https://travis-ci.org/findpikachu/myVueUI)
+<<<<<<< HEAD
 
 ##介绍
+||||||| merged common ancestors
+##介绍
+=======
+
+## 介绍
+>>>>>>> origin/master
 这是我在学习vue时制作的一个ui框架
-##开始使用
+
+## 开始使用
 1.添加 CSS 样式
 使用本框架前，请在 CSS 中开启 border-box
 ```
