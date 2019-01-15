@@ -1,6 +1,6 @@
 {
   "name": "myvueui1",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "一个vue ui 框架",
   "main": "dist/index.js",
   "scripts": {
