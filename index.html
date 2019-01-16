@@ -19,11 +19,12 @@
             --color: #333;
             --border-color: #999;
             --border-color-hover: #666;
+            --box-shadow-color: rgba(0, 0, 0, 0.5);
         }
 
 
     </style>
-    <script src="//at.alicdn.com/t/font_1012082_v9wf689pne.js"></script>
+    <script src="//at.alicdn.com/t/font_1012082_mamqmcy543i.js"></script>
 </head>
 <body>
 <div id="app">
@@ -31,13 +32,14 @@
     <g-button>按钮</g-button>
     <g-button icon="icon-setting" icon-position="right">按钮</g-button>
     <g-button-group>
-
-
         <g-button icon="icon-left">上一页</g-button>
-
         <g-button>更多</g-button>
         <g-button icon="icon-right" icon-position="right">下一页</g-button>
     </g-button-group>
+    <g-input value="hello"></g-input>
+    <g-input value="world" disabled></g-input>
+    <g-input value="zzz" readonly></g-input>
+    <g-input value="zhangsan" error="姓名不能少于两个字"></g-input>
 
 </div>
 <script src="node_modules/vue/dist/vue.min.js"></script>
