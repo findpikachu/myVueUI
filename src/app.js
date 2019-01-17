@@ -12,7 +12,8 @@ Vue.component("g-input",Input);
 new Vue({
     el: "#app",
     data: {
-        loading:true
+        loading:true,
+        message: "hi"
     }
 })
 

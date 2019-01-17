@@ -40,6 +40,9 @@
     <g-input value="world" disabled></g-input>
     <g-input value="zzz" readonly></g-input>
     <g-input value="zhangsan" error="姓名不能少于两个字"></g-input>
+    <g-input v-model="message"></g-input>
+    <p>{{message}}</p>
+    <button @click="message+=1">+1</button>
 
 </div>
 <script src="node_modules/vue/dist/vue.min.js"></script>

@@ -1,6 +1,15 @@
 <template>
     <div class="wrapper">
-        <input type="text" :value="value" :disabled="disabled" :readonly="readonly">
+        <input type="text"
+               :value="value"
+               :disabled="disabled"
+               :readonly="readonly"
+               @change="$emit('change',$event.target.value)"
+               @input="$emit('input',$event.target.value)"
+               @focus="$emit('focus',$event.target.value)"
+               @blur="$emit('blur',$event.target.value)"
+
+        >
         <template v-if="error">
             <g-icon icon="icon-error" class="error"></g-icon>
             <span class="errorMessage">{{error}}</span>
@@ -13,7 +22,7 @@
 
     export default {
         name: "input",
-        components: {Icon},
+        components: {"g-icon":Icon},
         props: {
             value: {
                 type: String
