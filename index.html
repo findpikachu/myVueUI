@@ -21,7 +21,11 @@
             --border-color-hover: #666;
             --box-shadow-color: rgba(0, 0, 0, 0.5);
         }
-
+        .demo {
+            background-color: #eee;
+            border:1px solid #333333;
+            height: 100px;
+        }
 
     </style>
     <script src="//at.alicdn.com/t/font_1012082_mamqmcy543i.js"></script>
@@ -83,18 +87,14 @@
     </g-row>
     <g-row gutter="20">
         <g-col span="24"
-               :ipad="{span:8}"
                :narrow-pc="{span:4}"
-               :pc="{span:2}"
-               :wide-pc="{span:1}"
+               class="demo"
         >
             11111
         </g-col>
         <g-col span="24"
-               :ipad="{span:16}"
                :narrow-pc="{span:20}"
-               :pc="{span:22}"
-               :wide-pc="{span:23}"
+               class="demo"
         >777
         </g-col>
     </g-row>
