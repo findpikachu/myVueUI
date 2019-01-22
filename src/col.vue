@@ -21,10 +21,10 @@
         props: {
             span: [Number,String],
             offset: [Number,String],
-            phone: {
-                type: Object,
-                validator:validator
-            },
+            // phone: {
+            //     type: Object,
+            //     validator:validator
+            // },
             ipad: {
                 type: Object,
                 validator:validator
@@ -54,8 +54,8 @@
             },
             colClasses() {
 
-                const {span,offset,phone,ipad,narrowPc,pc,widePc} = this
-                const devices = {phone,ipad,"narrow-pc":narrowPc,pc,"wide-pc":widePc};
+                const {span,offset,ipad,narrowPc,pc,widePc} = this
+                const devices = {ipad,"narrow-pc":narrowPc,pc,"wide-pc":widePc};
                 const deviceSpanClasses = Object.entries(devices).map(([devicesString,device]) => {
                     return device  && device.span && `col-${devicesString}-${device.span}`
                 })
@@ -87,20 +87,7 @@
                 margin-left: $n / 24 * 100%;
             }
         }
-        @media (max-width: 576px) {
-            $class-prefix:col-phone-;
-            @for $n from 1 through 24 {
-                &.#{$class-prefix}#{$n} {
-                    width: $n / 24 * 100%;
-                }
-            }
-            $class-prefix:offset-phone-;
-            @for $n from 1 through 24 {
-                &.#{$class-prefix}#{$n} {
-                    margin-left: $n / 24 * 100%;
-                }
-            }
-        }
+
         @media (max-width: 576px) {
             $class-prefix: col-phone-;
             @for $n from 1 through 24 {
