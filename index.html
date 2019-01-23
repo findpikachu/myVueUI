@@ -24,7 +24,7 @@
         .demo {
             background-color: #eee;
             border:1px solid #333333;
-            height: 100px;
+            min-height: 100px;
         }
 
     </style>
@@ -32,73 +32,80 @@
 </head>
 <body>
 <div id="app">
-    <g-button icon="icon-setting" :loading="loading" @click="loading = !loading">按钮</g-button>
-    <g-button>按钮</g-button>
-    <g-button icon="icon-setting" icon-position="right">按钮</g-button>
-    <g-button-group>
-        <g-button icon="icon-left">上一页</g-button>
-        <g-button>更多</g-button>
-        <g-button icon="icon-right" icon-position="right">下一页</g-button>
-    </g-button-group>
-    <g-input value="hello"></g-input>
-    <g-input value="world" disabled></g-input>
-    <g-input value="zzz" readonly></g-input>
-    <g-input value="zhangsan" error="姓名不能少于两个字"></g-input>
-    <g-input v-model="message"></g-input>
-    <p>{{message}}</p>
-    <button @click="message+=1">+1</button>
-    <hr>
-    <g-row gutter="20" align="right">
-        <g-col >1</g-col>
-        <g-col >2</g-col>
-    </g-row>
-    <g-row  gutter="20" align="center">
-        <g-col>1</g-col>
-        <g-col>2</g-col>
-        <g-col>3</g-col>
-    </g-row>
-    <g-row  gutter="20">
-        <g-col>1</g-col>
-        <g-col>2</g-col>
-        <g-col>3</g-col>
-        <g-col>4</g-col>
-    </g-row>
-    <g-row  gutter="20">
-        <g-col span="2">1</g-col>
-        <g-col span="22" offset="2">11</g-col>
-    </g-row>
-    <g-row  gutter="20">
-        <g-col span="4">1</g-col>
-        <g-col span="20" >11</g-col>
-    </g-row>
-    <g-row  gutter="20">
-        <g-col span="4">1</g-col>
-        <g-col span="18" offset="2">11</g-col>
-    </g-row>
-    <g-row  gutter="20">
-        <g-col span="4">1</g-col>
-        <g-col span="8" offset="2">11</g-col>
-        <g-col span="8" offset="2">11</g-col>
-    </g-row>
-    <g-row  gutter="20">
-        <g-col span="4">1</g-col>
-        <g-col span="4" offset="6">11</g-col>
-        <g-col span="8" offset="2">11</g-col>
-    </g-row>
-    <g-row gutter="20">
-        <g-col span="24"
-               :narrow-pc="{span:4}"
-               class="demo"
-        >
-            11111
-        </g-col>
-        <g-col span="24"
-               :narrow-pc="{span:20}"
-               class="demo"
-        >777
-        </g-col>
-    </g-row>
-
+    <!--<g-button icon="icon-setting" :loading="loading" @click="loading = !loading">按钮</g-button>-->
+    <!--<g-button>按钮</g-button>-->
+    <!--<g-button icon="icon-setting" icon-position="right">按钮</g-button>-->
+    <!--<g-button-group>-->
+        <!--<g-button icon="icon-left">上一页</g-button>-->
+        <!--<g-button>更多</g-button>-->
+        <!--<g-button icon="icon-right" icon-position="right">下一页</g-button>-->
+    <!--</g-button-group>-->
+    <!--<g-input value="hello"></g-input>-->
+    <!--<g-input value="world" disabled></g-input>-->
+    <!--<g-input value="zzz" readonly></g-input>-->
+    <!--<g-input value="zhangsan" error="姓名不能少于两个字"></g-input>-->
+    <!--<g-input v-model="message"></g-input>-->
+    <!--<p>{{message}}</p>-->
+    <!--<button @click="message+=1">+1</button>-->
+    <!--<hr>-->
+    <!--<g-row gutter="20" align="right">-->
+        <!--<g-col >1</g-col>-->
+        <!--<g-col >2</g-col>-->
+    <!--</g-row>-->
+    <!--<g-row  gutter="20" align="center">-->
+        <!--<g-col>1</g-col>-->
+        <!--<g-col>2</g-col>-->
+        <!--<g-col>3</g-col>-->
+    <!--</g-row>-->
+    <!--<g-row  gutter="20">-->
+        <!--<g-col>1</g-col>-->
+        <!--<g-col>2</g-col>-->
+        <!--<g-col>3</g-col>-->
+        <!--<g-col>4</g-col>-->
+    <!--</g-row>-->
+    <!--<g-row  gutter="20">-->
+        <!--<g-col span="2">1</g-col>-->
+        <!--<g-col span="22" offset="2">11</g-col>-->
+    <!--</g-row>-->
+    <!--<g-row  gutter="20">-->
+        <!--<g-col span="4">1</g-col>-->
+        <!--<g-col span="20" >11</g-col>-->
+    <!--</g-row>-->
+    <!--<g-row  gutter="20">-->
+        <!--<g-col span="4">1</g-col>-->
+        <!--<g-col span="18" offset="2">11</g-col>-->
+    <!--</g-row>-->
+    <!--<g-row  gutter="20">-->
+        <!--<g-col span="4">1</g-col>-->
+        <!--<g-col span="8" offset="2">11</g-col>-->
+        <!--<g-col span="8" offset="2">11</g-col>-->
+    <!--</g-row>-->
+    <!--<g-row  gutter="20">-->
+        <!--<g-col span="4">1</g-col>-->
+        <!--<g-col span="4" offset="6">11</g-col>-->
+        <!--<g-col span="8" offset="2">11</g-col>-->
+    <!--</g-row>-->
+    <!--<g-row gutter="20">-->
+        <!--<g-col span="24"-->
+               <!--:narrow-pc="{span:4}"-->
+               <!--class="demo"-->
+        <!--&gt;-->
+            <!--11111-->
+        <!--</g-col>-->
+        <!--<g-col span="24"-->
+               <!--:narrow-pc="{span:20}"-->
+               <!--class="demo"-->
+        <!--&gt;777-->
+        <!--</g-col>-->
+    <!--</g-row>-->
+    <g-layout style="height: 100vh;">
+        <g-sider class="demo">sider</g-sider>
+        <g-layout>
+            <g-header class="demo">header</g-header>
+            <g-content class="demo">content</g-content>
+            <g-footer class="demo">footer</g-footer>
+        </g-layout>
+    </g-layout>
 </div>
 <script src="node_modules/vue/dist/vue.min.js"></script>
 <script src="./src/app.js"></script>
